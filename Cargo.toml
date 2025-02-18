@@ -7,9 +7,9 @@ default-members = ["src/*"]
 
 [workspace.package]
 authors = [
-    "June Clementine Strawberry <june@girlboss.ceo>",
-    "strawberry <strawberry@puppygock.gay>", # woof
-    "Jason Volk <jason@zemos.net>",
+	"June Clementine Strawberry <june@girlboss.ceo>",
+	"strawberry <strawberry@puppygock.gay>",          # woof
+	"Jason Volk <jason@zemos.net>",
 ]
 categories = ["network-programming"]
 description = "a very cool Matrix chat homeserver written in Rust"
@@ -32,13 +32,7 @@ features = ["serde"]
 
 [workspace.dependencies.smallvec]
 version = "1.13.2"
-features = [
-	"const_generics",
-	"const_new",
-	"serde",
-	"union",
-	"write",
-]
+features = ["const_generics", "const_new", "serde", "union", "write"]
 
 [workspace.dependencies.const-str]
 version = "0.5.7"
@@ -126,14 +120,14 @@ features = ["util"]
 version = "0.6.2"
 default-features = false
 features = [
-    "add-extension",
-    "catch-panic",
-    "cors",
-    "sensitive-headers",
-    "set-header",
-    "timeout",
-    "trace",
-    "util",
+	"add-extension",
+	"catch-panic",
+	"cors",
+	"sensitive-headers",
+	"set-header",
+	"timeout",
+	"trace",
+	"util",
 ]
 
 [workspace.dependencies.rustls]
@@ -144,12 +138,7 @@ features = ["aws_lc_rs"]
 [workspace.dependencies.reqwest]
 version = "0.12.9"
 default-features = false
-features = [
-	"rustls-tls-native-roots",
-	"socks",
-	"hickory-dns",
-	"http2",
-]
+features = ["rustls-tls-native-roots", "socks", "hickory-dns", "http2"]
 
 [workspace.dependencies.serde]
 version = "1.0.216"
@@ -183,20 +172,12 @@ default-features = false
 [workspace.dependencies.image]
 version = "0.25.5"
 default-features = false
-features = [
-	"jpeg",
-	"png",
-	"gif",
-	"webp",
-]
+features = ["jpeg", "png", "gif", "webp"]
 
 [workspace.dependencies.blurhash]
 version = "0.2.3"
 default-features = false
-features = [
-	"fast-linear-to-srgb",
-	"image",
-]
+features = ["fast-linear-to-srgb", "image"]
 
 # logging
 [workspace.dependencies.log]
@@ -222,15 +203,7 @@ default-features = false
 [workspace.dependencies.clap]
 version = "4.5.23"
 default-features = false
-features = [
-	"derive",
-	"env",
-	"error-context",
-	"help",
-	"std",
-	"string",
-	"usage",
-]
+features = ["derive", "env", "error-context", "help", "std", "string", "usage"]
 
 [workspace.dependencies.futures]
 version = "0.3.30"
@@ -273,21 +246,13 @@ default-features = false
 [workspace.dependencies.hyper]
 version = "1.5.1"
 default-features = false
-features = [
-	"server",
-	"http1",
-	"http2",
-]
+features = ["server", "http1", "http2"]
 
 [workspace.dependencies.hyper-util]
 # hyper-util >=0.1.9 seems to have DNS issues
 version = "=0.1.8"
 default-features = false
-features = [
-	"server-auto",
-	"server-graceful",
-	"tokio",
-]
+features = ["server-auto", "server-graceful", "tokio"]
 
 # to support multiple variations of setting a config option
 [workspace.dependencies.either]
@@ -340,55 +305,48 @@ version = "0.1.2"
 
 # Used for matrix spec type definitions and helpers
 [workspace.dependencies.ruma]
-git = "https://github.com/girlbossceo/ruwuma"
-#branch = "conduwuit-changes"
-rev = "f5667c6292adb43fbe4725d31d6b5127a0cf60ce"
+git = "https://github.com/dr-bonez/ruwuma"
+branch = "bugfix/allow-empty-auth"
+#rev = "f5667c6292adb43fbe4725d31d6b5127a0cf60ce"
 features = [
-    "compat",
-    "rand",
-    "appservice-api-c",
-    "client-api",
-    "federation-api",
-    "markdown",
-    "push-gateway-api-c",
-    "state-res",
-    "server-util",
-    "unstable-exhaustive-types",
-    "ring-compat",
-    "compat-upload-signatures",
-    "identifiers-validation",
-    "unstable-unspecified",
-    "unstable-msc2448",
-    "unstable-msc2666",
-    "unstable-msc2867",
-    "unstable-msc2870",
-    "unstable-msc3026",
-    "unstable-msc3061",
-    "unstable-msc3245",
-    "unstable-msc3266",
-    "unstable-msc3381", # polls
-    "unstable-msc3489", # beacon / live location
-    "unstable-msc3575",
-    "unstable-msc4075",
-    "unstable-msc4121",
-    "unstable-msc4125",
-    "unstable-msc4186",
-    "unstable-msc4203", # sending to-device events to appservices 
-    "unstable-msc4210", # remove legacy mentions
-    "unstable-extensible-events",
+	"compat",
+	"rand",
+	"appservice-api-c",
+	"client-api",
+	"federation-api",
+	"markdown",
+	"push-gateway-api-c",
+	"state-res",
+	"server-util",
+	"unstable-exhaustive-types",
+	"ring-compat",
+	"compat-upload-signatures",
+	"identifiers-validation",
+	"unstable-unspecified",
+	"unstable-msc2448",
+	"unstable-msc2666",
+	"unstable-msc2867",
+	"unstable-msc2870",
+	"unstable-msc3026",
+	"unstable-msc3061",
+	"unstable-msc3245",
+	"unstable-msc3266",
+	"unstable-msc3381",           # polls
+	"unstable-msc3489",           # beacon / live location
+	"unstable-msc3575",
+	"unstable-msc4075",
+	"unstable-msc4121",
+	"unstable-msc4125",
+	"unstable-msc4186",
+	"unstable-msc4203",           # sending to-device events to appservices 
+	"unstable-msc4210",           # remove legacy mentions
+	"unstable-extensible-events",
 ]
 
 [workspace.dependencies.rust-rocksdb]
 path = "deps/rust-rocksdb"
 package = "rust-rocksdb-uwu"
-features = [
-	"multi-threaded-cf",
-	"mt_static",
-	"lz4",
-	"zstd",
-	"zlib",
-	"bzip2",
-]
+features = ["multi-threaded-cf", "mt_static", "lz4", "zstd", "zlib", "bzip2"]
 
 [workspace.dependencies.sha2]
 version = "0.10.8"
@@ -421,16 +379,16 @@ features = ["rt-tokio"]
 version = "0.35.0"
 default-features = false
 features = [
-    "backtrace",
-    "contexts",
-    "debug-images",
-    "panic",
-    "rustls",
-    "tower",
-    "tower-http",
-    "tracing",
-    "reqwest",
-    "log",
+	"backtrace",
+	"contexts",
+	"debug-images",
+	"panic",
+	"rustls",
+	"tower",
+	"tower-http",
+	"tracing",
+	"reqwest",
+	"log",
 ]
 
 [workspace.dependencies.sentry-tracing]
@@ -476,11 +434,7 @@ default-features = false
 [workspace.dependencies.hardened_malloc-rs]
 version = "0.1.2"
 default-features = false
-features = [
-	"static",
-	"gcc",
-	"light",
-]
+features = ["static", "gcc", "light"]
 
 [workspace.dependencies.rustyline-async]
 version = "0.4.3"
@@ -841,7 +795,7 @@ unused-qualifications = "warn"
 #unused-results = "warn"                                             # TODO
 
 ## some sadness
-elided_named_lifetimes = "allow"                                     # TODO!
+elided_named_lifetimes = "allow" # TODO!
 let_underscore_drop = "allow"
 missing_docs = "allow"
 # cfgs cannot be limited to expected cfgs or their de facto non-transitive/opt-in use-case e.g.
@@ -877,11 +831,11 @@ correctness = { level = "warn", priority = -1 }
 nursery = { level = "warn", priority = -1 }
 
 ## some sadness
-missing_const_for_fn = { level = "allow", priority = 1 }             # TODO
-option_if_let_else = { level = "allow", priority = 1 }               # TODO
-redundant_pub_crate = { level = "allow", priority = 1 }              # TODO
-significant_drop_in_scrutinee = { level = "allow", priority = 1 }    # TODO
-significant_drop_tightening = { level = "allow", priority = 1 }      # TODO
+missing_const_for_fn = { level = "allow", priority = 1 }          # TODO
+option_if_let_else = { level = "allow", priority = 1 }            # TODO
+redundant_pub_crate = { level = "allow", priority = 1 }           # TODO
+significant_drop_in_scrutinee = { level = "allow", priority = 1 } # TODO
+significant_drop_tightening = { level = "allow", priority = 1 }   # TODO
 
 ###################
 pedantic = { level = "warn", priority = -1 }
